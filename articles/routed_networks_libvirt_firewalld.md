@@ -10,12 +10,8 @@ This article is all about enabling the following configuration on a Red Hat Ente
 This should all be pretty easy, right?  Routed networks with libvirt are easy by themselves, and firewalld is pretty easy to configure.  Both are quite well documented, BUT I couldn't get them to work together.
 
 Here's my desired configuration:
-file:///home/bblasco/Downloads/Libvirt%20routed%20network%20with%20Firewalld.png![7045466d5b50b8335b853b1b1fa677ab.png](:/aa84671a09cf4c03a44630e9376a10e7)
-
-Local network: 192.168.1.0/24
-Hypervisor host physical interface = 192.168.1.6 (FedoraServer zone)
-Network for VMs: 192.168.6.0/24
-IP address of virbr1 interface on hypervisor: 192.168.6.254 (libvirt zone)
+![Network configuration for routed libvirt network](
+routed_networks_libvirt_firewalld.png "Network configuration for routed libvirt network")
 
 ## What's the challenge?
 
