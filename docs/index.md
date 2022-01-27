@@ -1,2 +1,2 @@
-# Index heading
-This is a test index
+# Ben's index heading
+This is Ben's test index
