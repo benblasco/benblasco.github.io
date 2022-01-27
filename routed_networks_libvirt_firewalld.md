@@ -1,3 +1,7 @@
+layout: page
+title: "How to configure firewalld for routed networks in libvirt"
+permalink: /blog/routed_networks_libvirt_firewalld/
+
 # How to configure firewalld for routed networks in libvirt
 
 If you're reading this you probably did a web search for "libvirt routed firewalld" or something very similar. 
