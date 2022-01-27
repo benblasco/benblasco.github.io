@@ -30,7 +30,9 @@ This tells me the FedoraServer zone is rejecting my request.  Why?  It turns out
 Fortunately the RFE (Request For Enhancement) above pointed me in the direction of the following two articles, that explain the "Policy Objects" feature that was implemented in firewalld around 2020.
 
 Read more here:
+
 [Policy Objects: Introduction](https://firewalld.org/2020/09/policy-objects-introduction)
+
 [Policy Objects: Filtering Container and Virtual Machine Traffic](https://firewalld.org/2020/09/policy-objects-filtering-container-and-vm-traffic)
 
 ## What does the firewalld configuration look like?
