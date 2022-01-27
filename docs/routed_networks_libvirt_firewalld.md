@@ -15,7 +15,7 @@ This article is all about enabling the following configuration on a Red Hat Ente
 This should all be pretty easy, right?  Routed networks with libvirt are easy by themselves, and firewalld is pretty easy to configure.  Both are quite well documented, BUT I couldn't get them to work together.
 
 Here's my desired configuration:
-![Network configuration for routed libvirt network](routed_networks_libvirt_firewalld.png "Network configuration for routed libvirt network")
+![Network configuration for routed libvirt network](routed_networks_libvirt_firewalld.png)
 
 ## What's the challenge?
 
