@@ -64,14 +64,14 @@ Reload the config
 firewall-cmd --reload
 ```
 
-NOTE: Should the target be ACCEPT or CONTINUE... and why?
-
 With the above configuration we can now happily route traffic through the host, to and from the VMs, without NAT being required.  This has the host effectively acting as a transit router.
 
 It should be noted that all traffic entering each zone is subject to the rules of that zone.  Any services or ports allowed or denied will be respected as one would expect.
 
+Another thing to note is that the policies above set the target to ACCEPT, but it may make more sense to set them to CONTINUE, allowing other policies to be processed in systems with a more complex configuration.  You can find more reading here: [firewalld.policy](https://firewalld.org/documentation/man-pages/firewalld.policy.html)
+
 ## Wrap up
 
-To summarise, this configuration allows us to firewall traffic to the host (hypervisor), and forward traffic to and from the guest VMs.  Firewalling of ingress traffic into each VM is then the responsibility of each VM itself.
+To summarise, this firewalld configuration allows us to firewall traffic to the host (hypervisor), and forward traffic to and from the guest VMs.  Any further firewalling of ingress traffic into each VM is then the responsibility of each VM itself.
 
 Special thanks to @space88man and @erig0 on Github for pointing me in the right direction.
