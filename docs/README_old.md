@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "PAGE TITLE"
-permalink: /blog/index/
+permalink: /blog/readme-old/
 ---
 
 # blog
