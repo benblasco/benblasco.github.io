@@ -1,2 +1,2 @@
 # blog
-For pesonal blogging on technical stuff (for now)
+For personal blogging on technical stuff (for now)
