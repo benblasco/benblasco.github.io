@@ -7,7 +7,6 @@ permalink: /azure_harden_rhel_vm/
 1. Spin up a new RHEL 8 VM using the Private BYOS RHEL 8 images we now have access to in Azure
 2. Log in to the VM
 3. Install Ansible
-
 ```
 sudo -i
 yum clean all
@@ -32,7 +31,7 @@ ls -la rhel8-playbook-cis*
 7. Run the playbook
 ```
 ansible-playbook -i "localhost," -c local rhel8-playbook-cis.yml
-# or
+\# or
 ansible-playbook -i "localhost," -c local rhel8-playbook-cis_server_l1.yml
 
 ```
