@@ -31,7 +31,9 @@ permalink: /azure_harden_rhel_vm/
 7. Run the playbook
     ```
     ansible-playbook -i "localhost," -c local rhel8-playbook-cis.yml
-    \# or
+    ```
+    or
+    ```
     ansible-playbook -i "localhost," -c local rhel8-playbook-cis_server_l1.yml
     ```
 
