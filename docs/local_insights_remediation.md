@@ -7,14 +7,14 @@ permalink: /local_insights_remediation/
 
 ## Introduction
 
-Insights for Red Hat Enterprise Linux is a great way to identify issues that may compromise the security, stability, and performance of your RHEL systems.  It also gives you the ability to remediate issues using the power of Ansible.  There are many ways to execute the remediation depending on your environment:
+Insights for Red Hat Enterprise Linux, available at [console.redhat.com](console.redhat.com), is a great way to identify issues that may compromise the security, stability, and performance of your RHEL systems.  It also gives you the ability to remediate issues using the power of Ansible.  There are many ways to execute the remediation depending on your environment:
 
 - Through Red Hat Satellite
 - Through Ansible Automation Platform (formerly known as Ansible Tower)
 - Directly to the host (RHEL 8.5 onwards)
 - "Manually" on a host with Ansible installed, including the host being remediated itself
 
-Here is an example where we take a remediation, in the form of an Ansible playbook downloaded from Insights (ie the Hybrid Cloud Console at console.redhat.com), and run it locally on the host we are remediating.
+Here is an example where we take a remediation, in the form of an Ansible playbook downloaded from Insights (ie the Hybrid Cloud Console at [console.redhat.com](console.redhat.com)), and run it locally on the host we are remediating.
 
 ## What we need to do on our RHEL 7 host
 
