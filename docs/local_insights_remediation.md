@@ -40,7 +40,6 @@ Now that Ansible is installed, we can run the playbook.  Here are the commands, 
 ```
 HOSTNAME=`cat /etc/hostname`
 ansible-playbook -i "$HOSTNAME," -c local playbook.yml
-
 ```
 
 Before running the playbook, let's break these last commands down:
