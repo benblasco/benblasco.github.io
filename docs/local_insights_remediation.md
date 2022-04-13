@@ -88,7 +88,9 @@ PLAY RECAP *********************************************************************
 rhel79             : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
-The above output tells us that a package upgrade took place, ie "changed", on the system, and everything ran successfully.
+The above output tells us that a package upgrade took place, ie "changed", on the system, and everything ran successfully.  It also shows that the Insights client was run afterwards, updating the data available in the Hybrid Cloud Console.
+
+## Further reading
 
 If you want to learn more about Ansible, check out the following helpful resources:
 - [Intro to playbooks](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html)
