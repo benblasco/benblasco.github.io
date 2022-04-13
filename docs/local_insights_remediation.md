@@ -91,5 +91,5 @@ rhel79             : ok=5    changed=2    unreachable=0    failed=0    skipped=0
 The above output tells us that a package upgrade took place, ie "changed", on the system, and everything ran successfully.
 
 If you want to learn more about Ansible, check out the following helpful resources:
-- https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html
-- https://www.redhat.com/en/topics/automation/learning-ansible-tutorial
+- [Intro to playbooks](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html)
+- [Learning Ansible basics](https://www.redhat.com/en/topics/automation/learning-ansible-tutorial)
