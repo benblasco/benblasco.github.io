@@ -1,5 +1,5 @@
 ---
-title: "How to enable Red Hat Cloud Access in Azure"
+title: "How to run an Insights remediation locally on a RHEL 7 host"
 permalink: /local_insights_remediation/
 ---
 
