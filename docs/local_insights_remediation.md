@@ -89,8 +89,32 @@ rhel79             : ok=5    changed=2    unreachable=0    failed=0    skipped=0
 
 The above output tells us that a package upgrade took place, ie "changed", on the system, and everything ran successfully.  It also shows that the Insights client was run afterwards, updating the data available in the Hybrid Cloud Console.
 
+## What if I want to centralise my automation?
+
+The local example above provides the lowest effort way to run a playbook on a single host, but doesn't really scale.  Ideally we want to install Ansible on a single host and use it as the controller, or centralised location from where we run our automation.  This is what we would do differently:
+
+1. Install Ansible on a host that can reach all the other hosts that want to automate against.  We will refer to this as the control node.
+2. Define an inventory of RHEL hosts that we run our Insights-generated playbooks against.  Assuming that you have working DNS and that the DNS names match the hostnames defined for your Insights inventory, your inventory (which lives in `/etc/ansible/hosts`) would look something like this:
+```
+dbserver.example.com
+webserver.example.com
+mailserver.example.com
+```
+3. Ensure that:
+  1. The same Linux user is defined on on control node and the hosts in the inventory
+  2. The control node's public SSH key has been shared with all the hosts in the inventory (via `ssh-copy-id`)
+  3. That Linux user can sudo to root without a password.  If this won't be possible you will need to look up the Ansible `--ask-become-pass` parameter and read further
+
+With all of the above setup done, we just need to copy the remediation playbook to our control node, and run it as follows:
+```
+ansible-playbook playbook.yml
+```
+
+This configuration allows us to run playbooks that are automating against multiple hosts, for example when applying the same patch to several systems.
+
 ## Further reading
 
 If you want to learn more about Ansible, check out the following helpful resources:
 - [Intro to playbooks](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html)
 - [Learning Ansible basics](https://www.redhat.com/en/topics/automation/learning-ansible-tutorial)
+- [How to build your inventory](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html)
