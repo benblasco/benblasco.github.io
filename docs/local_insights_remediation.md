@@ -101,9 +101,9 @@ webserver.example.com
 mailserver.example.com
 ```
 3. Ensure that:
-  1. The same Linux user is defined on on control node and the hosts in the inventory
-  2. The control node's public SSH key has been shared with all the hosts in the inventory (via `ssh-copy-id`)
-  3. That Linux user can sudo to root without a password.  If this won't be possible you will need to look up the Ansible `--ask-become-pass` parameter and read further
+   - The same Linux user is defined on on control node and the hosts in the inventory
+   - The control node's public SSH key has been shared with all the hosts in the inventory (via `ssh-copy-id`)
+   - That Linux user can sudo to root without a password.  If this won't be possible you will need to look up the Ansible `--ask-become-pass` parameter and read further
 
 With all of the above setup done, we just need to copy the remediation playbook to our control node, and run it as follows:
 ```
