@@ -37,6 +37,7 @@ The steps below are a slight modification of what you would be told to do at the
 5. Generate the token as requested
 6. Copy and save the token *with care* as you will need it later on.  Please note that the token is one very long string that wraps around multiple lines.
 7. Run the following commands on your newly built RHEL VM/existing Ansible control node as a regular user that can sudo to root without a password.  The commands below are slightly different to what the online instructions tell you so copy from here, not from the web page.  Remember to paste your token into the second command as one single string.
+
 ```
 ansible-galaxy collection install redhatinsights.subscriptions
 
