@@ -1,13 +1,10 @@
-# Ben's index heading
-This is Ben's test index
+# Articles on LinkedIn
+
+[Articles by Benjamin Blasco on LinkedIn](https://www.linkedin.com/in/benblasco/recent-activity/posts/)
 
 # My posts at redhat.com
 
 [Posts by Benjamin Blasco at redhat.com](https://www.redhat.com/en/authors/benjamin-blasco)
-
-# Articles on LinkedIn
-
-[Articles by Benjamin Blasco on LinkedIn](https://www.linkedin.com/in/benblasco/recent-activity/posts/)
 
 # My YouTube tech video channel
 
