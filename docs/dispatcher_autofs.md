@@ -1,9 +1,9 @@
 ---
-title: "NetworkManager Dispatcher and Autofs: A Match made in heaven"
+title: "NetworkManager-dispatcher and Autofs: A match made in heaven"
 permalink: /dispatcher_autofs/
 ---
 
-# NetworkManager Dispatcher and Autofs: A Match made in heaven
+# NetworkManager-dispatcher and Autofs: A match made in heaven
 
 ## Some background
 
@@ -15,7 +15,7 @@ When I am not at home, these shares are unreachable. When I leave home and wake 
 
 ## How to solve it
 
-It would be great if I could ensure that autofs is automatically disabled when disconnecting from my home WiFi network, and enabled when I reconnect to it. I researched this extensively, seeing if I could create a dependency for the autofs service in Systemd, but it doesn't have the smarts to do this. Fortunately I found the solution, in NetworkManager's Dispatcher service. Quoting directly from the manual page:
+It would be great if I could ensure that autofs is automatically disabled when disconnecting from my home WiFi network, and enabled when I reconnect to it. I researched this extensively, seeing if I could create a dependency for the autofs service in Systemd, but it doesn't have the smarts to do this. Fortunately I found the solution, in NetworkManager's NetworkManager-dispatcher service. Quoting directly from the manual page:
 "NetworkManager-dispatcher service is a D-Bus activated service that runs user provided scripts upon certain changes in NetworkManager."
 
 OK, this sounds great! All I need to do now is put together a couple of scripts:
