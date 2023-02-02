@@ -13,7 +13,11 @@
 # Technical articles
 
 [NetworkManager-dispatcher and Autofs: A match made in heaven](/dispatcher_autofs/)
+
 [How to enable Red Hat Cloud Access in Azure](/azure_cloud_access/)
+
 [How to run an Insights remediation locally on a RHEL 7 host](/local_insights_remediation/)
+
 [How to quickly CIS harden a RHEL VM in Azure](/azure_harden_rhel_vm/)
+
 [(Deprecated) How to configure firewalld for routed networks in libvirt](/routed_networks_libvirt_firewalld/)
