@@ -93,5 +93,5 @@ With these scripts in place, my laptop no longer hangs or waits for extended per
 
 # Important supporting links
 
-https://www.linux-magazine.com/Issues/2020/239/Dispatcher-Scripts
-https://people.freedesktop.org/~lkundrak/nm-docs/NetworkManager.html
+- [Linux Magazine:  Automate network configurations with dispatcher scripts](https://www.linux-magazine.com/Issues/2020/239/Dispatcher-Scripts)
+- [NetworkManager Man Page](https://people.freedesktop.org/~lkundrak/nm-docs/NetworkManager.html)
