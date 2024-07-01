@@ -13,6 +13,26 @@ This article describes how to enable RHEL 7 ELS purchased from Red Hat on PAYG R
 
 Note: This article *does not* describe how to enable RHEL 7 ELS purchased from Cloud Provider Marketplaces
 
+## Additional reading
+
+Please refer to the links below for official information on RHEL 7 ELS from Red Hat.
+
+[FAQ: Red Hat Enterprise Linux 7 reaches End of Maintenance Phase and transitions to Extended Life Phase](https://access.redhat.com/articles/7005471)
+
+[Red Hat Enterprise Linux 7 Extended Lifecycle Support Maintenance Policy](https://access.redhat.com/support/policy/updates/rhel7-els-support-maintenance-policy)
+
+[How do I access Red Hat Enterprise Linux 7 Extended Life Cycle Support (ELS) content after Red Hat Enterprise Linux 7 transitions to Extended Life Phase?](https://access.redhat.com/articles/7026275)
+
+The additional links below are cloud-specific.
+ 
+[Red Hat Enterprise Linux for Third Party Linux Migration with ELS](https://aws.amazon.com/marketplace/pp/prodview-hviegizlv6jpu)
+
+[Enabling Red Hat Enterprise Linux 7 Extended Life-cycle Support via Cloud Marketplaces](https://access.redhat.com/articles/rhel-7-els-on-cloud)
+
+[Enabling metering for Red Hat Enterprise Linux with Extended Lifecycle Support in your cloud environment](https://access.redhat.com/articles/7061563)
+
+## Procedure
+
 ### Check the starting status of our host
 
 Check the status of subscription-manager. PAYG hosts are typically not registered with Red Hat, and should report status "Unknown".
