@@ -18,7 +18,7 @@ Note: This article *does not* describe how to enable RHEL 7 ELS purchased from C
 Check the status of subscription-manager. PAYG hosts are typically not registered with Red Hat, and should report status "Unknown".
 
 ```
-[root@bblasco-rhel7-els2 ~]# subscription-manager status
+[root@bblasco-rhel7-els ~]# subscription-manager status
 +-------------------------------------------+
    System Status Details
 +-------------------------------------------+
@@ -32,7 +32,7 @@ Check the repositories enabled on the host. PAYG instances will use Red Hat Upda
 
 ```
 
-[root@bblasco-rhel7-els2 ~]# yum repolist
+[root@bblasco-rhel7-els ~]# yum repolist
 Loaded plugins: amazon-id, product-id, search-disabled-repos, subscription-manager
 
 This system is not registered with an entitlement server. You can use subscription-manager to register.
@@ -47,7 +47,7 @@ repolist: 34,728
 
 Check whether subscription-manager is managing repositories for the host. PAYG systems using RHUI will have this set to 0 (zero).
 ```
-[root@bblasco-rhel7-els2 ~]# grep manage_repos /etc/rhsm/rhsm.conf
+[root@bblasco-rhel7-els ~]# grep manage_repos /etc/rhsm/rhsm.conf
 manage_repos = 0
 
 ```
@@ -65,7 +65,7 @@ Create an activation key with "Latest release" as the workload:
 
 Save the activation key, then click on it and select "Add Repositories". Please note that it may take a long time (at least a minute) to load the complete repository list. You can filter on Label with "rhel-7-server-els" to see all related repositories:
 
-![Additional repositories](rhel7_els_byos_02_additional_repositories)
+![Additional repositories](rhel7_els_byos_02_additional_repositories.png)
 
 Select the "Red Hat Enterprise Linux 7 Server - Extended Life Cycle Support (RPMs)" repository, and any other optional repositories required, then save the changes.
 
@@ -80,37 +80,38 @@ Finally, note the Organisation ID, as this is required for the registration comm
 First, register the system using the subscription-manager command. This may not be necessary for BYOS systems already registered with Red Hat.
 
 ```
-sudo -i
-[root@bblasco-rhel7-els2 ~]# subscription-manager register --org=<MY_ORG_ID> --activationkey=<MY_ACTIVATION_KEY>
-The system has been registered with ID: 7bada824-8ee9-430e-88b3-83ec503f7491
-The registered system name is: bblasco-rhel7-els2
+[ec2-user@bblasco-rhel7-els ~]$ sudo -i
+[root@bblasco-rhel7-els ~]# subscription-manager register --org=<MY_ORG_ID> --activationkey=<MY_ACTIVATION_KEY>
+The system has been registered with ID: 7bada824-7ee9-430e-88b3-73ec503f7491
+The registered system name is: bblasco-rhel7-els
 ```
 
 Check whether subscription-manager is able to manage repositories, and then ensure it is set to enabled.
 
 ```
-[root@bblasco-rhel7-els2 ~]# grep manage_repos /etc/rhsm/rhsm.conf
+[root@bblasco-rhel7-els ~]# grep manage_repos /etc/rhsm/rhsm.conf
 manage_repos = 0
-[root@bblasco-rhel7-els2 ~]# 
-[root@bblasco-rhel7-els2 ~]# subscription-manager config --rhsm.manage_repos=1
-[root@bblasco-rhel7-els2 ~]# 
-[root@bblasco-rhel7-els2 ~]# grep manage_repos /etc/rhsm/rhsm.conf
+[root@bblasco-rhel7-els ~]# 
+[root@bblasco-rhel7-els ~]# subscription-manager config --rhsm.manage_repos=1
+[root@bblasco-rhel7-els ~]# 
+[root@bblasco-rhel7-els ~]# grep manage_repos /etc/rhsm/rhsm.conf
 manage_repos = 1
+```
 
 Enable the RHEL 7 ELS repository
 
 ```
-[root@bblasco-rhel7-els2 ~]# subscription-manager repos --enable rhel-7-server-els-rpms
+[root@bblasco-rhel7-els ~]# subscription-manager repos --enable rhel-7-server-els-rpms
 
 Repository 'rhel-7-server-els-rpms' is enabled for this system.
-[root@bblasco-rhel7-els2 ~]# 
+[root@bblasco-rhel7-els ~]# 
 ```
 
 Check that the repository is now enabled on the host.
 Note: In the output below you will see a number of repositories "listed more than once in the configuration". You can ignore this warning.
 
 ```
-[root@bblasco-rhel7-els2 ~]# yum repolist
+[root@bblasco-rhel7-els ~]# yum repolist
 Loaded plugins: amazon-id, product-id, search-disabled-repos, subscription-manager
 Repository rhel-server-rhui-rhscl-7-rpms is listed more than once in the configuration
 Repository rhel-7-server-rhui-debug-rpms is listed more than once in the configuration
