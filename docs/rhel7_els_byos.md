@@ -1,6 +1,6 @@
 ---
 title: "Enable Red Hat Enterprise Linux (RHEL) 7 Extended Lifecycle Support (ELS) using BYO Subscriptions"
-permalink: /rhel7_els_byos.md/
+permalink: /rhel7_els_byos/
 ---
 
 # Enable Red Hat Enterprise Linux (RHEL) 7 Extended Lifecycle Support (ELS) using BYO Subscriptions
@@ -98,7 +98,7 @@ manage_repos = 0
 manage_repos = 1
 ```
 
-Enable the RHEL 7 ELS repository
+Enable the RHEL 7 ELS repository.
 
 ```
 [root@bblasco-rhel7-els ~]# subscription-manager repos --enable rhel-7-server-els-rpms
