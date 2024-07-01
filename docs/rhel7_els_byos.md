@@ -15,7 +15,7 @@ Note: This article *does not* describe how to enable RHEL 7 ELS purchased from C
 
 ### Check the starting status of our host
 
-Check the status of subscription-manager. PAYG hosts are typically not registered with Red Hat, and should report status "Unknown"
+Check the status of subscription-manager. PAYG hosts are typically not registered with Red Hat, and should report status "Unknown".
 
 ```
 [root@bblasco-rhel7-els2 ~]# subscription-manager status
@@ -45,38 +45,35 @@ repolist: 34,728
 
 ```
 
-Check whether subscription-manager is managing repositories for the host. PAYG systems using RHUI will have this set to 0 (zero)
+Check whether subscription-manager is managing repositories for the host. PAYG systems using RHUI will have this set to 0 (zero).
 ```
 [root@bblasco-rhel7-els2 ~]# grep manage_repos /etc/rhsm/rhsm.conf
 manage_repos = 0
 
 ```
 
-
 ### Create an activation key with ELS enabled
 
-Log in to the Red Hat Hybrid Cloud Console at console.redhat.com using your Red Hat ID.
+Log in to the Red Hat Hybrid Cloud Console at [console.redhat.com](console.redhat.com) using your Red Hat ID.
 
 The shortcut to the Activation Keys page is here:
-https://console.redhat.com/insights/connector/activation-keys
+[Activation Keys](https://console.redhat.com/insights/connector/activation-keys)
 
 Create an activation key with "Latest release" as the workload:
 
-ADD SCREENSHOT
+![Create Activation Key](rhel7_els_byos_01_create_ak.png)
 
 Save the activation key, then click on it and select "Add Repositories". Please note that it may take a long time (at least a minute) to load the complete repository list. You can filter on Label with "rhel-7-server-els" to see all related repositories:
 
-ADD SCREENSHOT
+![Additional repositories](rhel7_els_byos_02_additional_repositories)
 
 Select the "Red Hat Enterprise Linux 7 Server - Extended Life Cycle Support (RPMs)" repository, and any other optional repositories required, then save the changes.
 
-ADD SCREENSHOT
-
-![12c878dac10b7882117fc5a351125156.png](:/ae5438e638fd4970823848209ae2447c)
+![Filter and select repositories](rhel7_els_byos_04_select_repos.png)
 
 Finally, note the Organisation ID, as this is required for the registration command. This can be found under your name at the top right of the web page.
 
-ADD SCREENSHOT
+![Organisation ID](rhel7_els_byos_06_org_id.png)
 
 ### Register the system, enable management of repos, and add the ELS repos
 
@@ -88,8 +85,10 @@ sudo -i
 The system has been registered with ID: 7bada824-8ee9-430e-88b3-83ec503f7491
 The registered system name is: bblasco-rhel7-els2
 ```
-Check whether subscription-manager is able to manage repositories, and then ensure it is enabled.
 
+Check whether subscription-manager is able to manage repositories, and then ensure it is set to enabled.
+
+```
 [root@bblasco-rhel7-els2 ~]# grep manage_repos /etc/rhsm/rhsm.conf
 manage_repos = 0
 [root@bblasco-rhel7-els2 ~]# 
@@ -97,9 +96,6 @@ manage_repos = 0
 [root@bblasco-rhel7-els2 ~]# 
 [root@bblasco-rhel7-els2 ~]# grep manage_repos /etc/rhsm/rhsm.conf
 manage_repos = 1
-The system has been registered with ID: 7bada824-8ee9-430e-88b3-83ec503f7491
-The registered system name is: bblasco-rhel7-els2
-[root@bblasco-rhel7-els2 ~]# 
 
 Enable the RHEL 7 ELS repository
 
@@ -111,6 +107,8 @@ Repository 'rhel-7-server-els-rpms' is enabled for this system.
 ```
 
 Check that the repository is now enabled on the host.
+Note: In the output below you will see a number of repositories "listed more than once in the configuration". You can ignore this warning.
+
 ```
 [root@bblasco-rhel7-els2 ~]# yum repolist
 Loaded plugins: amazon-id, product-id, search-disabled-repos, subscription-manager
@@ -139,3 +137,7 @@ rhel-7-server-rhui-rpms/7Server/x86_64                     Red Hat Enterprise Li
 rhel-7-server-rpms/7Server/x86_64                          Red Hat Enterprise Linux 7 Server (RPMs)                                         34,476
 rhui-client-config-server-7/x86_64                         RHUI Client Configuration Server 7                                                    9
 ```
+
+## Conclusion
+
+This procedure lets you enable the RHEL ELS CDN repositories for your systems consuming BYOS ELS. You can now run `yum update` and continue to get security updates according to what is made available in line with the ELS support policy.
