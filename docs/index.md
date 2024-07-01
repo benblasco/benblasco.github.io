@@ -11,6 +11,7 @@
 [Ben Blasco's Tech Videos](https://www.youtube.com/channel/UCX3x7s4ruNjwp6bNI0QQ-DA)
 
 # Technical articles
+[Enable Red Hat Enterprise Linux (RHEL) 7 Extended Lifecycle Support (ELS) using BYO Subscriptions](/rhel7_els_byos/)
 
 [NetworkManager-dispatcher and Autofs: A match made in heaven](/dispatcher_autofs/)
 
