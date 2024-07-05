@@ -156,6 +156,7 @@ rhui-client-config-server-7/x86_64                         RHUI Client Configura
 ```
 
 Note 1: The ELS repositories contain *all* RHEL 7 server content, not just ELS content.
+
 Note 2: There is also a rhel-7-server-els-optional-rpms repository you can enable if you were previously using the optional rpms repository
 
 ## Conclusion
