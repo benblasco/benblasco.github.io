@@ -25,7 +25,7 @@ Please refer to the links below for official information on RHEL 7 ELS from Red 
 
 ## Procedure
 
-### Pre-requisites
+### Prerequisites
 
 Please enable Simple Content Access (either per Satellite org for systems registered to Satellite or at [access.redhat.com](access.redhat.com) for all others) and Cloud Access for each cloud provider (at [console.redhat.com/settings/integrations](console.redhat.com/settings/integrations)).
 
