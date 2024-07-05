@@ -23,17 +23,13 @@ Please refer to the links below for official information on RHEL 7 ELS from Red 
 
 [How do I access Red Hat Enterprise Linux 7 Extended Life Cycle Support (ELS) content after Red Hat Enterprise Linux 7 transitions to Extended Life Phase?](https://access.redhat.com/articles/7026275)
 
-The additional links below are cloud-specific.
- 
-[Red Hat Enterprise Linux for Third Party Linux Migration with ELS](https://aws.amazon.com/marketplace/pp/prodview-hviegizlv6jpu)
-
-[Enabling Red Hat Enterprise Linux 7 Extended Life-cycle Support via Cloud Marketplaces](https://access.redhat.com/articles/rhel-7-els-on-cloud)
-
-[Enabling metering for Red Hat Enterprise Linux with Extended Lifecycle Support in your cloud environment](https://access.redhat.com/articles/7061563)
-
 ## Procedure
 
-### Check the starting status of our host
+### Pre-requisites
+
+Please enable Simple Content Access (either per Satellite org for systems registered to Satellite or at [access.redhat.com](access.redhat.com) for all others) and Cloud Access for each cloud provider (at [console.redhat.com/settings/integrations](console.redhat.com/settings/integrations)).
+
+### Check the starting status of the host
 
 Check the status of subscription-manager. PAYG hosts are typically not registered with Red Hat, and should report status "Unknown".
 
@@ -95,7 +91,7 @@ Finally, note the Organisation ID, as this is required for the registration comm
 
 ![Organisation ID](rhel7_els_byos_06_org_id.png)
 
-### Register the system, enable management of repos, and add the ELS repos
+### Register the system, enable management of repositories, and add the ELS repositories
 
 First, register the system using the subscription-manager command. This may not be necessary for BYOS systems already registered with Red Hat.
 
@@ -158,6 +154,9 @@ rhel-7-server-rhui-rpms/7Server/x86_64                     Red Hat Enterprise Li
 rhel-7-server-rpms/7Server/x86_64                          Red Hat Enterprise Linux 7 Server (RPMs)                                         34,476
 rhui-client-config-server-7/x86_64                         RHUI Client Configuration Server 7                                                    9
 ```
+
+Note 1: The ELS repositories contain *all* RHEL 7 server content, not just ELS content.
+Note 2: There is also a rhel-7-server-els-optional-rpms repository you can enable if you were previously using the optional rpms repository
 
 ## Conclusion
 
