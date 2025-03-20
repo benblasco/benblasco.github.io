@@ -6,6 +6,8 @@
 
 [Posts by Benjamin Blasco at redhat.com](https://www.redhat.com/en/authors/benjamin-blasco)
 
+[Learning Path: Harden new builds with Insights image builder and compliance | Red Hat Developer](https://developers.redhat.com/learn/rhel/harden-new-builds-insights-image-builder-and-compliance)
+
 # My YouTube tech video channel
 
 [Ben Blasco's Tech Videos](https://www.youtube.com/channel/UCX3x7s4ruNjwp6bNI0QQ-DA)
