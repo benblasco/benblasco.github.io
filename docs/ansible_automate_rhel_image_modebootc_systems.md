@@ -5,7 +5,7 @@ permalink: /ansible_automate_rhel_image_modebootc_systems.md/
 
 # Note to reader
 
-The article below has now been superseded by this fantastic article from the RHEL Image Mode product managers at Red Hat. I have kept this here in case anybody finds information that would be of use.
+The article below has now been superseded by this fantastic article from the RHEL Image Mode product managers at Red Hat. I have kept my original article here in case anybody finds information that would be of use.
 
 [How to use RHEL system roles in image mode ](https://developers.redhat.com/articles/2025/03/18/how-use-rhel-system-roles-image-mode)
 
