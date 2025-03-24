@@ -14,7 +14,7 @@
 
 # Technical articles
 
-[How to use Ansible to automate RHEL Image Mode/bootc systems](ansible_automate_rhel_image_modebootc_systems/)
+[How to use Ansible to automate RHEL Image Mode/bootc systems](/ansible_automate_rhel_image_modebootc_systems/)
 
 [Enable Red Hat Enterprise Linux (RHEL) 7 Extended Lifecycle Support (ELS) using BYO Subscriptions](/rhel7_els_byos/)
 
