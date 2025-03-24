@@ -1,6 +1,6 @@
 ---
 title: "How to use Ansible to automate RHEL Image Mode/bootc systems"
-permalink: /ansible_automate_rhel_image_modebootc_systems.md/
+permalink: /ansible_automate_rhel_image_modebootc_systems/
 ---
 
 # Note to reader
